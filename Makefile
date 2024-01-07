@@ -35,8 +35,8 @@ all : $(NAME)
 $(NAME) : $(OBJS)
 	ar rc $(NAME) $(OBJS)
 
-$(OBJS) : $(SRCS)
-	gcc -g3 -c $(SRCS) -I.
+%.o: %.c
+	gcc -g3 -o $@ -c $<
 
 clean :
 	rm -f $(OBJS)
