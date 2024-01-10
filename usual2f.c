@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2023
 ** Fonction usuelle argvariadic flag comp
 ** File description:
-** Fonction usuelle qui récup. la donnée depuis list variadique flags complexe
+** Fonction usuelle qui récup. la donnée depuis list var flags complexe
 */
 
 #include "printf.h"
