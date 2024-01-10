@@ -29,14 +29,14 @@ int nbmot(char const *str)
     int len = my_strlen(str);
 
     if ((str[0] >= 'A' && str[0] <= 'Z') || (str[0] >= 'a' && str[0] <= 'z') ||
-        (str[i] >= '0' && str[i] <= '9')) {
+        (str[0] >= '0' && str[0] <= '9')) {
         nb += 1;
     }
     for (i = 0; i < len; i++) {
         if ((str[i] >= 'A' && str[i] <= 'Z') ||
             (str[i] >= 'a' && str[i] <= 'z') ||
             (str[i] >= '0' && str[i] <= '9')) {
-            i += count(str, i);
+            i += count(str, i) - 1;
             nb += 1;
         } else {
             i += 1;
