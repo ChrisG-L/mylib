@@ -31,6 +31,8 @@ int fs_get_number_from_first_line(char const *filepath);
 char *my_strncpy(char *dest, const char *src, int n);
 int my_atoi(char *str);
 char *my_strdup(char *src);
+char *my_itoa(int nb);
+char *my_revstr(char *str);
 
 int mylenoflign(const char *filepath);
 int mylenofbiggerlign(const char *filepath);

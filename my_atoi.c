@@ -23,3 +23,39 @@ int my_atoi(char *str)
     }
     return nb * neg;
 }
+
+char *my_revstr(char *str)
+{
+    int len = 0;
+    int i;
+    char c;
+
+    for (; str[len]; len++);
+    for (i = 0; str[i + i - len % 2]; i++) {
+        c = str[i];
+        *(str + i) = str[len - i - 1];
+        *(str + len - i - 1) = c;
+    }
+    return (str);
+}
+
+char *my_itoa(int nb)
+{
+    int i = 0;
+    char *str = malloc(sizeof(char) * 12);
+
+    if (nb == 0)
+        return "0";
+    if (nb < 0) {
+        str[i] = '-';
+        i += 1;
+        nb *= -1;
+    }
+    while (nb > 0) {
+        str[i] = nb % 10 + '0';
+        nb /= 10;
+        i += 1;
+    }
+    str[i] = '\0';
+    return my_revstr(str);
+}
