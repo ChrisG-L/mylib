@@ -27,6 +27,7 @@ SRCS = 	fct.c 	\
 		my_atoi.c \
 		my_abs.c \
 		my_strdup.c \
+		my_strtok.c \
 
 OBJS = $(SRCS:.c=.o)
 

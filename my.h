@@ -33,6 +33,9 @@ int my_atoi(char *str);
 char *my_strdup(char *src);
 char *my_itoa(int nb);
 char *my_revstr(char *str);
+int tokenlen(char *str, char delim);
+int my_strncmp(const char *str1, const char *str2, int n);
+char **my_strtok(char *str, char delim);
 
 int mylenoflign(const char *filepath);
 int mylenofbiggerlign(const char *filepath);
