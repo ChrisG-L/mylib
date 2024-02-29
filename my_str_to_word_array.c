@@ -13,8 +13,7 @@ int count(const char *str, int i)
 {
     int a = 0;
 
-    while ((str[i] >= 'A' && str[i] <= 'z') ||
-            (str[i] >= '-' && str[i] <= ':')) {
+    while (str[i] >= '!' && str[i] <= '~') {
         a += 1;
         i += 1;
     }
@@ -27,13 +26,11 @@ int nbmot(char const *str)
     int i = 0;
     int len = my_strlen(str);
 
-    if ((str[0] >= 'A' && str[0] <= 'z') ||
-        (str[0] >= '-' && str[0] <= ':')) {
+    if (str[i] >= '!' && str[i] <= '~') {
         nb += 1;
     }
     for (i = 0; i < len; i++) {
-        if ((str[i] >= 'A' && str[i] <= 'z') ||
-            (str[i] >= '-' && str[i] <= ':')) {
+        if (str[i] >= '!' && str[i] <= '~') {
             i += count(str, i) - 1;
             nb += 1;
         } else {
@@ -48,8 +45,7 @@ void extract(char const *str, char **dest, int *i, int *word_index)
     int word_i = *i;
     int wordlen = 0;
 
-    while ((str[*i] >= 65 && str[*i] <= 122) ||
-            (str[*i] >= '-' && str[*i] <= ':')) {
+    while (str[*i] >= '!' && str[*i] <= '~') {
         wordlen += 1;
         *i += 1;
     }
@@ -71,8 +67,7 @@ char **my_str_to_word_array(char const *str)
 
     dest = malloc((nb + 1) * sizeof(char *));
     while (i < len) {
-        if ((str[i] >= 'A' && str[i] <= 'z') ||
-            (str[i] >= '-' && str[i] <= ':')) {
+        if (str[i] >= '!' && str[i] <= '~') {
             extract(str, dest, &i, &word_index);
         } else {
             i += 1;
