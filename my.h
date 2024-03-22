@@ -14,6 +14,8 @@
     #include <stdlib.h>
     #include <sys/stat.h>
     #include <sys/sysmacros.h>
+    #include <stdlib.h>
+    #include <stdio.h>
 
 typedef struct square_s {
     int tempsize;
@@ -36,6 +38,7 @@ char *my_revstr(char *str);
 int tokenlen(char *str, char delim);
 int my_strncmp(const char *str1, const char *str2, int n);
 char **my_strtok(char *str, char delim);
+char *my_strstr(char *str, const char *to_find);
 
 int mylenoflign(const char *filepath);
 int mylenofbiggerlign(const char *filepath);
@@ -64,6 +67,5 @@ char *load_file_in_mem(char const *filepath);
 char **load_2d_arr_from_file(char const *filepath, int nb_rows, int nb_cols);
 int is_square_of_size(char **map, int row, int col, int square_size);
 square_t *find_biggest_square(char **map, int nb_rows, int nb_cols);
-
 
 #endif /* !MY_H_ */

@@ -6,8 +6,6 @@
 */
 
 #include "my.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 int count(const char *str, int i)
 {
@@ -26,12 +24,9 @@ int nbmot(char const *str)
     int i = 0;
     int len = my_strlen(str);
 
-    if (str[i] >= '!' && str[i] <= '~') {
-        nb += 1;
-    }
-    for (i = 0; i < len; i++) {
+    for (i = 0; i < len;) {
         if (str[i] >= '!' && str[i] <= '~') {
-            i += count(str, i) - 1;
+            i += count(str, i);
             nb += 1;
         } else {
             i += 1;

@@ -11,6 +11,8 @@ char *my_stpcpy(char *dest, char const *src)
 {
     int i = 0;
 
+    if (src == NULL)
+        return (NULL);
     while (src[i] != '\0') {
         copy_char(i, src, dest);
         i += 1;
