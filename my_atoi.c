@@ -7,6 +7,14 @@
 
 #include "my.h"
 
+int is_num(char carac)
+{
+    if (carac >= '0' && carac <= '9') {
+        return 1;
+    }
+    return 0;
+}
+
 int my_atoi(char *str)
 {
     int i = 0;

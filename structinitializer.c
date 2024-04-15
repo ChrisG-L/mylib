@@ -7,7 +7,7 @@
 
 #include "printf.h"
 
-void structinitflags(char *str, int *i, finfo *Fi)
+void structinitflags(char *str, int *i, finfo_t *Fi)
 {
     int entered = 0;
     char Flag = str[*i];
@@ -19,7 +19,7 @@ void structinitflags(char *str, int *i, finfo *Fi)
     }
 }
 
-void structinitwidth(char *str, int *i, finfo *Fi)
+void structinitwidth(char *str, int *i, finfo_t *Fi)
 {
     if (my_char_isnum(str[*i])) {
         Fi->width = 0;
@@ -30,7 +30,7 @@ void structinitwidth(char *str, int *i, finfo *Fi)
     }
 }
 
-void structinitprecision(char *str, int *i, finfo *Fi)
+void structinitprecision(char *str, int *i, finfo_t *Fi)
 {
     if (str[*i] == '.') {
         Fi->precision = 0;
@@ -42,7 +42,7 @@ void structinitprecision(char *str, int *i, finfo *Fi)
     }
 }
 
-void structinitlength(char *str, int *i, finfo *Fi)
+void structinitlength(char *str, int *i, finfo_t *Fi)
 {
     if (str[*i] == 'h' || str[*i] == 'l' || str[*i] == 'L') {
         Fi->length = str[*i];
@@ -50,9 +50,9 @@ void structinitlength(char *str, int *i, finfo *Fi)
     }
 }
 
-finfo structinit(char *str, int *i)
+finfo_t structinit(char *str, int *i)
 {
-    finfo Fi = { -1, -1, 6, -1 };
+    finfo_t Fi = { -1, -1, 6, -1 };
 
     structinitflags(str, i, &Fi);
     structinitwidth(str, i, &Fi);

@@ -39,6 +39,8 @@ int tokenlen(char *str, char delim);
 int my_strncmp(const char *str1, const char *str2, int n);
 char **my_strtok(char *str, char delim);
 char *my_strstr(char *str, const char *to_find);
+char *my_cleanstr(char *str);
+int is_num(char carac);
 
 int mylenoflign(const char *filepath);
 int mylenofbiggerlign(const char *filepath);
@@ -67,5 +69,8 @@ char *load_file_in_mem(char const *filepath);
 char **load_2d_arr_from_file(char const *filepath, int nb_rows, int nb_cols);
 int is_square_of_size(char **map, int row, int col, int square_size);
 square_t *find_biggest_square(char **map, int nb_rows, int nb_cols);
+
+void *my_realloc(void *ptr, size_t size);
+void my_memcpy(void *dest, const void *src, size_t n);
 
 #endif /* !MY_H_ */

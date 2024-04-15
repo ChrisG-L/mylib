@@ -16,7 +16,7 @@ void printsign(int *i)
         my_putstr("+");
 }
 
-int my_put_scienf(va_list va, finfo Fi)
+int my_put_scienf(va_list va, finfo_t Fi)
 {
     float nb = (float) va_arg(va, double);
     int int_part = (int) nb;
@@ -38,7 +38,7 @@ int my_put_scienf(va_list va, finfo Fi)
     my_put_nbr(i);
 }
 
-int my_put_floatautof(va_list va, finfo Fi)
+int my_put_floatautof(va_list va, finfo_t Fi)
 {
     double nb = va_arg(va, double);
     double stock = nb;

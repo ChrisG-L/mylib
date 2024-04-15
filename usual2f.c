@@ -7,7 +7,7 @@
 
 #include "printf.h"
 
-int my_put_nbrunsignedf(va_list va, finfo Fi)
+int my_put_nbrunsignedf(va_list va, finfo_t Fi)
 {
     unsigned int nb = va_arg(va, unsigned int);
 
@@ -18,7 +18,7 @@ int my_put_nbrunsignedf(va_list va, finfo Fi)
     return 0;
 }
 
-int my_put_floatf(va_list va, finfo Fi)
+int my_put_floatf(va_list va, finfo_t Fi)
 {
     double num = va_arg(va, double);
     int count = 0;
@@ -33,7 +33,7 @@ int my_put_floatf(va_list va, finfo Fi)
     return count;
 }
 
-int my_put_nbr_hexaf(va_list va, finfo Fi)
+int my_put_nbr_hexaf(va_list va, finfo_t Fi)
 {
     unsigned int nb = va_arg(va, unsigned int);
     char digit = 0;
@@ -49,7 +49,7 @@ int my_put_nbr_hexaf(va_list va, finfo Fi)
     return 0;
 }
 
-int my_put_nbr_hexamajf(va_list va, finfo Fi)
+int my_put_nbr_hexamajf(va_list va, finfo_t Fi)
 {
     unsigned int nb = va_arg(va, unsigned int);
     char digit = 0;
@@ -65,7 +65,7 @@ int my_put_nbr_hexamajf(va_list va, finfo Fi)
     return 0;
 }
 
-int ptr_f(va_list ap, finfo Fi)
+int ptr_f(va_list ap, finfo_t Fi)
 {
     unsigned long int ptr;
 

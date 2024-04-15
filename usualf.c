@@ -7,7 +7,7 @@
 
 #include "printf.h"
 
-int my_putcharf(va_list va, finfo Fi)
+int my_putcharf(va_list va, finfo_t Fi)
 {
     int c = va_arg(va, int);
 
@@ -15,7 +15,7 @@ int my_putcharf(va_list va, finfo Fi)
     return 0;
 }
 
-int my_putstrf(va_list va, finfo Fi)
+int my_putstrf(va_list va, finfo_t Fi)
 {
     char *str = va_arg(va, char *);
     int i = 0;
@@ -31,7 +31,7 @@ int my_putstrf(va_list va, finfo Fi)
     return 0;
 }
 
-int my_put_nbrf(va_list va, finfo Fi)
+int my_put_nbrf(va_list va, finfo_t Fi)
 {
     int nb = va_arg(va, int);
     int count = 0;
@@ -51,7 +51,7 @@ int my_put_nbrf(va_list va, finfo Fi)
     return count;
 }
 
-int my_put_nbrenoctalf(va_list va, finfo Fi)
+int my_put_nbrenoctalf(va_list va, finfo_t Fi)
 {
     unsigned int nb = va_arg(va, unsigned int);
 

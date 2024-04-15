@@ -2,16 +2,16 @@
 ** EPITECH PROJECT, 2023
 ** Miniprintf
 ** File description:
-** Mini printf (4 flags)
+** Mini my_printf (4 flags)
 */
 
 #include "printf.h"
 
-int formatinterro(char *str, int *i, va_list list, ptr func[])
+int formatinterro(char *str, int *i, va_list list, ptr_t func[])
 {
     int j = 0;
     char l[] = {'c', 'd', 'i', 's', 'u', 'o', 'f', 'x', 'X', 'p', 'e', 'g', 0};
-    finfo Fi;
+    finfo_t Fi;
 
     if (str[*i] == '%') {
         *i += 1;
@@ -31,7 +31,7 @@ int formatinterro(char *str, int *i, va_list list, ptr func[])
 int my_printf(char *str, ...)
 {
     va_list list;
-    ptr func[] = {&my_putcharf, &my_put_nbrf, &my_put_nbrf, &my_putstrf,
+    ptr_t func[] = {&my_putcharf, &my_put_nbrf, &my_put_nbrf, &my_putstrf,
         &my_put_nbrunsignedf, &my_put_nbrenoctalf, &my_put_floatf,
         &my_put_nbr_hexaf, &my_put_nbr_hexamajf, &ptr_f, &my_put_scienf,
         &my_put_floatautof};
