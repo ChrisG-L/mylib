@@ -7,20 +7,20 @@
 
 NAME = libmy.a
 
-SRCS = 	fct.c 	\
-		fct2.c	\
-		fct3.c	\
-		fct4.c 	\
-		usual.c	\
-		usual2.c \
-		lusual.c	\
-		lusual2.c \
+SRCS = 	file_length.c 	\
+		file_operations.c	\
+		memory_allocation.c	\
+		memory_management.c 	\
+		operations_array.c	\
+		operations_scientific.c \
+		operations_string.c	\
+		output_basic.c \
+		output_complex.c \
+		output_formatted.c \
+		output_formatted_scientific.c \
+		output_variadic_wrapper.c \
 		my_printf.c \
 		structinitializer.c \
-		usual3.c \
-		usualf.c \
-		usual2f.c \
-		usual3f.c \
 		my_strcmp.c \
 		my_str_to_word_array.c \
 		my_strncpy.c \
@@ -31,6 +31,7 @@ SRCS = 	fct.c 	\
 		my_strstr.c \
 		allocgest.c \
 		my_cleanstr.c \
+		square_finder.c \
 
 OBJS = $(SRCS:.c=.o)
 
